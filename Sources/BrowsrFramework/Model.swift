@@ -9,9 +9,15 @@ import Foundation
 
 // MARK: - Model
 public struct Model: Codable {
-    let totalCount: Int
-    let incompleteResults: Bool
-    let items: [Item]
+    public let totalCount: Int
+    public let incompleteResults: Bool
+    public let items: [Item]
+    
+    public init(totalCount: Int, incompleteResults: Bool, items: [Item]) {
+        self.totalCount = totalCount
+        self.incompleteResults = incompleteResults
+        self.items = items
+    }
     
     public enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
