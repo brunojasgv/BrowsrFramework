@@ -13,7 +13,7 @@ public struct Model: Codable {
     let incompleteResults: Bool
     let items: [Item]
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
         case incompleteResults = "incomplete_results"
         case items
@@ -42,7 +42,7 @@ public struct Item: Codable, Hashable {
     let eventsURL: String
     let siteAdmin: Bool
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case login
         case id
         case nodeID = "node_id"
