@@ -18,29 +18,23 @@ import Foundation
 
 public struct Browsr {
     
-    public init() {
-        
-    }
-    
-    public func doSomeWork() {
-        
-    }
-    
+    public init() {}
+
     @available(iOS 13.0.0, *)
     public func fetchOrgs(page: Int) async throws -> [Item] {
-        let response: Model = try await BrowsrAsyncAPI.request(apiRouter: .fetchOrg(page: page))
+        let response: Model = try await request(apiRouter: .fetchOrg(page: page))
         return response.items
     }
     
     @available(iOS 13.0.0, *)
-    public func searchOrgs(name: String) async throws -> [Item] {
-        let response: Model = try await BrowsrAsyncAPI.request(apiRouter: .searchOrg(name: name))
+    public static func searchOrgs(name: String) async throws -> [Item] {
+        let response: Model = try await request(apiRouter: .searchOrg(name: name))
         return response.items
     }
     
     @available(iOS 13.0.0, *)
-    public func sortOrgs(page: Int, sortType: String) async throws -> [Item] {
-        let response: Model = try await BrowsrAsyncAPI.request(apiRouter: .sortOrg(page: page, sortType: sortType))
+    public static func sortOrgs(page: Int, sortType: String) async throws -> [Item] {
+        let response: Model = try await request(apiRouter: .sortOrg(page: page, sortType: sortType))
         return response.items
     }
 

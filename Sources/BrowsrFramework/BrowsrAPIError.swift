@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Browsr API Error
-enum BrowsrAPIError: Error {
+public enum BrowsrAPIError: Error {
 
     case requestFailed(description: String)
     case jsonConversionFailure(description: String)
@@ -20,7 +20,7 @@ enum BrowsrAPIError: Error {
     case invalidURL
 
     // MARK: - Error types description
-    var customDescription: String {
+    public var customDescription: String {
         switch self {
             case .invalidURL: return "Invalid Url"
         case let .requestFailed(description): return "Request Failed error -> \(description)"

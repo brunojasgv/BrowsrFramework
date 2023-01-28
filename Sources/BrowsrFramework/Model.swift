@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Model
-struct Model: Codable {
+public struct Model: Codable {
     let totalCount: Int
     let incompleteResults: Bool
     let items: [Item]
@@ -21,7 +21,7 @@ struct Model: Codable {
 }
 
 // MARK: - Item
-struct Item: Codable, Hashable {
+public struct Item: Codable, Hashable {
     let login: String
     let id: Int
     let nodeID: String
