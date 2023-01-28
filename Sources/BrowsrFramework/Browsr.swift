@@ -10,7 +10,9 @@ import Foundation
 
 public struct Browsr {
     
-    public let model: Model
+    public let model: Model? = nil
+    
+    public init() {}
 
     @available(iOS 13.0.0, *)
     public func fetchOrgs(page: Int) async throws -> [Model.Item] {
