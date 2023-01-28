@@ -22,25 +22,25 @@ public struct Model: Codable {
 
 // MARK: - Item
 public struct Item: Codable, Hashable {
-    let login: String
-    let id: Int
-    let nodeID: String
-    let avatarURL: String
-    let gravatarID: String
-    let url: String
-    let htmlURL: String
-    let followersURL: String
-    let subscriptionsURL: String
-    let organizationsURL: String
-    let reposURL: String
-    let receivedEventsURL: String
-    let type: String
-    let score: Int
-    let followingURL: String
-    let gistsURL: String
-    let starredURL: String
-    let eventsURL: String
-    let siteAdmin: Bool
+    public let login: String
+    public let id: Int
+    public let nodeID: String
+    public let avatarURL: String
+    public let gravatarID: String
+    public let url: String
+    public let htmlURL: String
+    public let followersURL: String
+    public let subscriptionsURL: String
+    public let organizationsURL: String
+    public let reposURL: String
+    public let receivedEventsURL: String
+    public let type: String
+    public let score: Int
+    public let followingURL: String
+    public let gistsURL: String
+    public let starredURL: String
+    public let eventsURL: String
+    public let siteAdmin: Bool
     
     public init(login: String, id: Int, nodeID: String, avatarURL: String, gravatarID: String, url: String, htmlURL: String, followersURL: String, subscriptionsURL: String, organizationsURL: String, reposURL: String, receivedEventsURL: String, type: String, score: Int, followingURL: String, gistsURL: String, starredURL: String, eventsURL: String, siteAdmin: Bool) {
         self.login = login
