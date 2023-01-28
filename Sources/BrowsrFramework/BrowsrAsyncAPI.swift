@@ -9,6 +9,7 @@ import Foundation
 
 public let BASE_URL = "https://api.github.com"
 
+// MARK: - Router
 public enum APIRouter {
     case fetchOrg(page: Int)
     case searchOrg(name: String)

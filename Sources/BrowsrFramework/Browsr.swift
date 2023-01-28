@@ -6,34 +6,26 @@
 //
 
 
-//public struct BrowsrFramework {
-//    public private(set) var text = "Hello, World!"
-//
-//    public init() {
-//    }
-//}
-
 import Foundation
-
 
 public struct Browsr {
     
-    public init() {}
+    public let model: Model
 
     @available(iOS 13.0.0, *)
-    public func fetchOrgs(page: Int) async throws -> [Item] {
+    public func fetchOrgs(page: Int) async throws -> [Model.Item] {
         let response: Model = try await request(apiRouter: .fetchOrg(page: page))
         return response.items
     }
     
     @available(iOS 13.0.0, *)
-    public static func searchOrgs(name: String) async throws -> [Item] {
+    public func searchOrgs(name: String) async throws -> [Model.Item] {
         let response: Model = try await request(apiRouter: .searchOrg(name: name))
         return response.items
     }
     
     @available(iOS 13.0.0, *)
-    public static func sortOrgs(page: Int, sortType: String) async throws -> [Item] {
+    public func sortOrgs(page: Int, sortType: String) async throws -> [Model.Item] {
         let response: Model = try await request(apiRouter: .sortOrg(page: page, sortType: sortType))
         return response.items
     }
