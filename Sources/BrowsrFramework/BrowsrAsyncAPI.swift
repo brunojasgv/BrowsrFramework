@@ -7,7 +7,7 @@
 
 import Foundation
 
-private let BASE_URL = "https://api.github.com"
+let BASE_URL = "https://api.github.com"
 
 // MARK: - Browsr Generic API
 class BrowsrAsyncAPI {
