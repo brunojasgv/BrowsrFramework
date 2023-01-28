@@ -10,8 +10,6 @@ import Foundation
 
 public struct Browsr {
     
-    public let item: Item? = nil
-    
     public init() {}
 
     @available(iOS 13.0.0, *)
