@@ -1,4 +1,4 @@
-# Frontend Coding Challenge BrowsrFramework
+# Frontend BrowsrFramework
 
 # Part 2
 
